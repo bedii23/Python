@@ -1,0 +1,63 @@
+def carré(n):
+    carré= n*n
+    return carré
+carré(3)
+
+def cube(n):
+    cube= n*n*n
+    return cube
+cube(3)
+
+def valeurAbsolue(n):
+    if n<0:
+        n = -n
+    return n
+valeurAbsolue(-856)
+
+def factorial(n): 
+    return 1 if (n==1 or n==0) else n * factorial(n - 1);  
+  
+num = 5; 
+print("Factorial of",num,"is", factorial(num))
+
+def mode():
+    dictionary={}
+    liste=[68, 99, 65, 445, 77, 244, 77]
+    maximum=0
+    for values in liste:
+       if values in dictionary:
+          dictionary[values]+=1
+       else:
+          dictionary[values]=1
+    if not maximum or dictionary[values]>maximum[0]:
+        maximum=(values,dictionary[values])
+        mode=maximum[0]
+    return mode
+mode()
+
+def moy():
+    liste=[68, 99, 65, 44, 77, 44, 44]
+    total = 0
+    for i in liste:
+        total +=i
+    moy= total / len(liste)
+    return moy
+moy()
+
+def minimum():
+    liste=[68, 99, 65, 44, 77, 44, 42]
+    valeurMini = 0
+    for i in range(len(liste)-1):
+        if liste[i] > liste[i+1]:
+            valeurMini = liste[i+1]
+    return valeurMini
+minimum()
+
+def maximum():
+    liste=[68, 99, 65, 44, 77, 144, 142]
+    valeurMax = 0
+    for i in range(len(liste)-1):
+        if valeurMax < liste[i+1]:
+            valeurMax = liste[i+1]
+    return valeurMax
+maximum()
